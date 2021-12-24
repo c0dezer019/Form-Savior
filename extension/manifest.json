@@ -1,0 +1,28 @@
+{
+   "name": "Form Savior",
+   "description": "Save form data",
+   "version": "0.1",
+   "manifest_version": 3,
+   "background": {
+      "service_worker": "background2.js"
+   },
+   "permissions": [
+      "storage", 
+      "activeTab", 
+      "tabs", 
+      "scripting"
+   ],
+   "host_permissions": [
+      "<all_urls>"
+   ],
+   "action": {
+      "default_popup": "/pages/popup.html"
+   },
+   "content_scripts": [
+      {
+         "matches": ["<all_urls>"],
+         "css": ["/styles/buttons.css"]
+      }
+   ],
+   "options_page": "/pages/options.html"
+}
