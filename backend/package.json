@@ -2,7 +2,6 @@
   "name": "form-savior-backend",
   "version": "1.0.0",
   "description": "Processes data for the Form Savior extension",
-  "type": "module",
   "main": "dist/express.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

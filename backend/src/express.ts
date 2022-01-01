@@ -1,4 +1,5 @@
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' });
+require(__dirname + '../config/config')[process.env.DB_PASS!];
 import express from 'express';
 import cors from 'cors';
 import flash from 'connect-flash';
@@ -25,7 +26,7 @@ app.use(
 
 app.use(
    session({
-      secret: `${process.env.SECRET}`,
+      secret: process.env.SECRET!,
       resave: false,
       saveUninitialized: true,
    })
